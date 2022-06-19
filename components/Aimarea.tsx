@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Aimarea() {
+export default function Aimarea({handleClick}: any) {
 
     const[x, setX] = useState(0);
     const[y, setY] = useState(0);
@@ -8,6 +8,7 @@ export default function Aimarea() {
     const changePosition = () => {
         setX(Math.floor(Math.random() * (window.innerWidth - 50)));
         setY(Math.floor(Math.random() * (window.innerHeight - 50) ));
+        handleClick(10);
     }
 
   return (
